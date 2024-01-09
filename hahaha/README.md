@@ -1,15 +1,13 @@
 <!-- Add banner here -->
-![Banner](./header.png)
+![foldxerror](header.png)
 
-# Project Title
+# FoldX5-BuildModel--RepairPDB
 
 <!-- Add buttons here -->
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)
-![GitHub last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
-![GitHub issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
-![GitHub](https://img.shields.io/github/license/navendu-pottekkat/awesome-readme)
+![GitHub last commit](https://img.shields.io/badge/Last_commit-Jan_2024-yellow)
+![GitHub](https://img.shields.io/badge/license-GPL_3.0-brightorange)
 
 <!-- Remove this note if you plan to copy this README -->
 
@@ -78,7 +76,7 @@ GitHub has a ToC feature now. It works really well, so this might not be needed.
 
 I just learned that VS Code automatically updates the ToC if you change any of the headings. Pretty cool!
 
-- [Project Title](#project-title)
+- [Project Title](#foldx5-buildmodel--repairpdb)
 - [Quickstart/Demo](#quickstartdemo)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
@@ -90,14 +88,27 @@ I just learned that VS Code automatically updates the ToC if you change any of t
 # Installation
 [(Back to top)](#table-of-contents)
 
-> **Note**: For longer README files, I usually add a "Back to top" buttton as shown above. It makes it easy to navigate.
-
-This is where your installation instructions go.
-
-You can add snippets here that your readers can copy-paste with click:
-
+### Step 1: Clone the repository
+First, clone or download this project from GitHub:
 ```shell
-gh repo clone navendu-pottekkat/awesome-readme
+git clone [https://github.com/QinglinZhai/FoldX5_BuildModel.git]
+```
+### Step 2: Enter the project directory
+Use the command line to enter the cloned or downloaded project directory:
+```shell
+cd [FoldX5_BuildModel]
+```
+### Step 3: Install FoldX5
+Please follow the official FoldX5 guide to download and install the FoldX5 software and make sure foldx.exe is accessible to your system.
+
+### Step 4: Setting Environment Variables (optional)
+For your convenience, you can add the path to foldx.exe to your system environment variable so that you can call it from any directory.
+
+### Step 5: Run the Script
+Before running the script, make sure you specify the path to foldx.exe in the script. I have also provided you with some common parameters.
+```shell
+python foldx_buildmodel.py --foldx5_executable /path/to/foldx.exe --config_dictionary --config_file_name --pdb --pdb_dir --mutant_file --output_dir
+python repair_PDB.py --foldx5_executable /path/to/foldx.exe --pdb --pdb_dir --output_dir
 ```
 
 # Usage
